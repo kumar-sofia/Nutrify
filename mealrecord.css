@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Matches mealplanning.css */
+}
+
+/* Body Styling */
+body {
+    background: url("images/back00.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #1d1e23; /* Consistent text color */
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+/* Headings Styling */
+h1 {
+    text-align: center;
+    color: white; /* White color for the heading */
+}
+
+h1 .blue {
+    color: #221f1f; /* Dark greenish-gray for a subtle contrast */
+}
+
+h1 .yellow {
+    color: #74855f; /* Accent yellow from mealplanning.css */
+}
+
+
+/* Table Styling */
+table.container {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+    background: rgba(108, 109, 100, 0.27); /* Light transparent background */
+    border-radius: 10px; /* Smooth edges */
+    overflow: hidden; /* Prevent overflow of border radius */
+}
+
+table.container thead {
+    background-color: #131415; 
+    color: #eff9f8; /* Light text for contrast */
+}
+
+table.container thead th h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+table.container tbody tr {
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+table.container tbody tr:nth-child(even) {
+    background-color: rgba(128, 156, 115, 0.569); /* Subtle alternate rows */
+}
+
+table.container tbody tr:hover {
+    background-color: rgba(98, 105, 83, 0.68)/* Hover effect on rows */
+}
+
+table.container tbody tr td {
+    padding: 12px;
+    font-size: 16px;
+    color: #1d1e23; /* Consistent text color */
+}
+
+table.container td a {
+    color: #141212;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+table.container td a:hover {
+    color: #ca0606; /* Accent yellow */
+}
+
+table.container th, table.container td {
+    border: 1px solid rgba(17, 17, 18, 0.364);
+    padding: 12px;
+}
+
+table.container th {
+    font-weight: bold;
+    text-align: center;
+    color: #eff9f8; /* Match thead styling */
+}
+
+/* Button Styling */
+.team-generate-btn {
+    padding: 12px 24px; /* Adjust padding for a more rectangular look */
+    font-size: 16px;
+    background-color: #000000; /* Black background */
+    color: #eff9f8; /* Light text for contrast */
+    border: none;
+    border-radius: 5px; /* Optional: Slight rounding of corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    display: inline-block; /* Ensures it's treated like a block element */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Hover state */
+.team-generate-btn:hover {
+    background-color: #1a1a1a; /* Slightly lighter black on hover */
+    transform: translateY(-2px);
+}
+
+/* Focus state */
+.team-generate-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.7); /* Green focus outline */
+}
+
+/* Active state */
+.team-generate-btn:active {
+    background-color: #333333; /* Darker black on click */
+    transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    table.container {
+        width: 100%;
+    }
+
+    table.container thead th h1 {
+        font-size: 16px;
+    }
+
+    table.container tbody tr td {
+        font-size: 14px;
+    }
+
+    button {
+        min-width: 120px; /* Adjust button width */
+        padding: 8px 16px; /* Smaller padding */
+    }
+}

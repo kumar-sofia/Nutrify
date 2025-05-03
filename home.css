@@ -1,0 +1,598 @@
+/* General Body Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Styling */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: hsl(90, 3%, 14%);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header .logo img {
+    height: 50px;
+  }
+  
+  /* Navigation Bar */
+  .navigation_bar {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navigation_bar li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .navigation_bar li a:hover {
+    background: #558776;
+    color: #000;
+    border-radius: 5px;
+  }
+  
+  /* Hamburger Menu styling */
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navigation_bar {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+    }
+  
+    .navigation_bar.active {
+        display: flex;
+    }
+  
+    .hamburger {
+        display: block;
+    }
+  }
+  
+  
+  
+  
+  /* Header Section */
+  #header {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('images/back000.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 60px; 
+    box-sizing: border-box;
+  }
+  
+  #header .content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  
+  #header .content h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  #header .content p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* button style */
+  #header .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff; 
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect */
+  #header .btn:hover {
+    background: #558776;
+    color: #fff;
+  }
+  
+  /* Active effect when button is clicked */
+  #header .btn:active {
+    background: #558776;
+    color: #fff;
+  }
+  
+  
+  
+  
+  /*---------------------about section -------------------------------*/
+  
+  .about {
+    text-align: center;
+    padding: 2rem 2rem;
+    margin-top: 0;
+    background-color: #dfd8b7;
+  }
+  
+  .about .heading {
+    margin-bottom: 3rem;
+    color: #333;
+  }
+  
+  .about .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .about .content {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .about .content span {
+    font-size: 1.2rem;
+    color: #454a48;
+  }
+  
+  .about .content h3 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .about .content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+  }
+  
+  .about .content .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    border: 2px solid #558776;
+    color: #558776;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .about .content .btn:hover {
+    background-color: #558776;
+    color: #23241c;
+  }
+  
+  .about .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  
+  
+  /* Button Style for Read More and less Read Less */
+  #myBtn {
+    background-color: transparent;
+    border: none;
+    color: #558776;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  #myBtn:hover {
+    color: #333;
+  }
+  
+  #more-text {
+    display: none;
+  }
+  
+  /* ----------------------About Section ends----------------------- */
+  
+  
+  
+  /* ----------------------Services Section starts ------------------ */
+  .services {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #c2c99c;
+  }
+  
+  .services .heading {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .services .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .services .box {
+    background: #dfd8b7;
+    padding: 2rem;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .services .box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .services .box .icon {
+    margin-bottom: 1.5rem;
+  }
+  
+  .services .box .icon img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .services .box .content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .services .box .line {
+    width: 50px;
+    height: 2px;
+    background-color: #558776;
+    margin: 0.5rem auto 1rem;
+  }
+  
+  .services .box .content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .services .box .content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .services .box .content ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .services .box .content ul li i {
+    color: #558776;
+    margin-right: 0.5rem;
+  }
+  /* -----------------service Section  ends -----------------*/
+  
+  
+  /* --------------General Button Styling --------------------*/
+  .services .box .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #558776; /* Button color */
+    border: 2px solid #558776;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 1.5rem; /* Adds spacing above the button */
+  }
+  
+  /*------------- Hover effect for buttons ---------------*/
+  .services .box .btn:hover {
+    background-color: #23241c; 
+    color: #fff;
+  }
+  
+  /* Hover effect for box */
+  .services .box:hover {
+    transform: translateY(-10px);
+  }
+  
+  
+  
+  
+  /* ---------------- food imprtance section ------------------- */
+  .food-importance {
+    padding: 5rem 2rem;
+    background-color: #c2c99c;
+    text-align: center;
+  }
+  
+  .food-importance .heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 3rem;
+  }
+  
+  /* -------------Cloud container for responsive layout------------------ */
+  .cloud-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  
+  .cloud {
+    position: relative;
+    background-color: #a09b84;
+    padding: 2rem;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  .cloud:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+  }
+  
+  .cloud-icon {
+    font-size: 3rem;
+    color: #728a5a;
+    margin-bottom: 1rem;
+  }
+  
+  
+  .cloud h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .cloud p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .cloud-container {
+        flex-direction: column;
+    }
+  
+    .cloud {
+        width: 80%;
+        margin: 1rem auto;
+    }
+  
+    .food-importance .heading {
+        font-size: 2rem;
+    }
+  
+    .cloud h3 {
+        font-size: 1.4rem;
+    }
+  
+    .cloud p {
+        font-size: 1rem;
+    }
+  }
+  
+  
+  
+  
+  
+  /*---------------- meals per day --------------- */
+  
+  .importance {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #dfd8b7;
+  }
+  
+  .importance h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .importance p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .importnace-col {
+    flex: 1;
+    min-width: 300px;
+    background-color: #c2c99c;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .importnace-col img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .importnace-col h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .importnace-col p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .importnace-col .hidden {
+    display: none;
+  }
+  
+  .fimportnace-col button {
+    margin: 0.5rem 0;
+    padding: 0.8rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .importnace-col button:hover {
+    background-color: #0056b3;
+  }
+  
+  .importnace-col .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #558776;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .importnace-col .btn:hover {
+    background-color: #282a2e;
+  }
+  
+  
+  
+  /* --------------------contact  Section------------------ */
+  
+  
+   
+  
+  .cta {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #dfd8b7;
+  }
+  
+  .cta {
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(106, 119, 72, 0.7), rgba(46, 40, 40, 0.7)), url('images/Contact.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 30px; /* Adjusted for smaller screens */
+  }
+  
+  .cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+    font-size: 2rem; /* Adjusted font size for responsiveness */
+    line-height: 1.4;
+  }
+  
+  .cta a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #558776;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta a:hover {
+    background-color: #1d2022;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cta {
+      width: 90%;
+      padding: 60px 15px; 
+    }
+  
+    .cta h1 {
+      font-size: 1.5rem; 
+    }
+  
+    .cta a {
+      font-size: 0.9rem;
+      padding: 8px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cta h1 {
+      font-size: 1.2rem; 
+    }
+  
+    .cta a {
+      font-size: 0.8rem;
+      padding: 6px 15px;
+    }
+  }
+  
+  

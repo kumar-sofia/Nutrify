@@ -1,0 +1,253 @@
+/* General Contact Page Styling */
+
+/* General Body Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Bar */
+.navigation_bar {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navigation_bar li {
+    display: inline-block;
+}
+
+.navigation_bar a {
+    color: rgb(245, 245, 245);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.navigation_bar a:hover {
+    background-color: #748360;
+    border-radius: 5px;
+}
+
+/* Hamburger icon adjustmet for samll screens  */
+.hamburger {
+    display: none;
+    font-size: 4rem; 
+    cursor: pointer;
+}
+/* responsive desing for samll screnns  */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; 
+    }
+
+    .navigation_bar {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #0f0e0e;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .navigation_bar.active {
+        display: flex; 
+    }
+
+    .navigation_bar li {
+        margin: 1rem 0;
+    }
+}
+
+/* ----------------Contact Section ---------------*/
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(94, 119, 78, 0.73);  
+    padding: 20px;
+    backdrop-filter: blur(10px); 
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    /* Round the edges style of the container */
+    border-radius: 19px; 
+    padding: 5rem; 
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Contact Information styling and postioning */
+.contact-info {
+    width: 50%;
+}
+
+.contact-info h2 {
+    font-size: 2.7rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.info .information {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.0rem;
+}
+
+.info .information img.icon {
+    width: 30px;
+    height: 20px;
+    margin-right: 1.9rem;
+    object-fit: contain;
+}
+
+.info .information p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/*  ------------Social Media Icon styling and postions -----------------*/
+.social-media {
+    margin-top: 3rem;
+}
+
+.social-media p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.social-icons {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    color: #0e0e0f;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #1d1f7de5;
+}
+
+/* Contact Form */
+.contact-form {
+    width: 45%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 1.9rem;
+}
+
+.input-container input,
+.input-container textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+    border-color: #303335;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.input-container input:focus + label,
+.input-container textarea:focus + label {
+    color: #111213;
+    font-weight: bold;
+    top: -0.5rem;
+}
+
+.textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.btn {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #0c0b0bd5;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #272a2d4d;
+}
+
+/* ------------responsiveness desing for different screen sizes -------------*/
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+    }
+}

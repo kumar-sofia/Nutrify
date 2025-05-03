@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrify</title>
+
+  <!------------adding  css style page link-->
+  <link rel="stylesheet" href="home.css">
+  <style>
+    html {
+      scroll-behavior: smooth; 
+    }
+    
+    /* code for navigation bar*/
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/diet.png" alt="Nutrify Logo" style="height: 50px;">
+    </div>
+    <nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <ul class="navigation_bar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+       <!--   <li><a href="meal_planning.html">Meal Planner</a></li>
+        <li><a href="Calories_Calculator.html">Calories</a></li>
+        <li><a href="Meal_tracker.html">Meal Track</a></li>-->
+        <li><a href="login.php">Log in</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+       
+      </ul>
+    </nav>
+  </header>
+
+  <!-- page content -->
+  <section id="header">
+    <div class="content">
+      <h3>Empower Your Health with Nutrify</h3>
+      <p>
+        At Nutrify, we offer comprehensive solutions <br>
+        Whether you're looking to lose weight, gain muscle, or simply maintain a balanced diet.
+      </p>
+      <a href="#about" class="btn">Read More</a> 
+    </div>
+  </section>
+
+<!-- ---------------------------about section --------------------- -->
+
+<section class="about" id="about">
+  <h1 class="heading">About Us</h1>
+
+  <div class="row">
+    <div class="content">
+      <p>
+        Nutrify is committed to simplifying your health journey, providing a holistic approach to wellness that goes beyond just diet. 
+        Our platform empowers you to take control of your health by offering easy-to-use tools to monitor your daily dietary habits, 
+        track your meals, and stay on top of your nutritional needs. Whether you're striving to lose weight, build muscle, or simply
+         maintain a balanced lifestyle, Nutrify provides personalized insights to guide you every step of the way
+        <span id="dots">...</span><span id="more" style="display:none;">
+          Our mission is to not only help you manage your calorie intake effectively but also offer expert nutrition tips tailored to your 
+          unique needs. We believe in the power of informed choices, and with Nutrify, you'll have access to valuable 
+          resources that will help you make better decisions about your meals and overall health.</p>
+          <p>By joining Nutrify, you're not just signing up for a diet track you're joining a community dedicated to achieving 
+            long-term health and wellness goals. Together, we can help you unlock your full potential, stay motivated, 
+            and turn your health aspirations into reality
+        </span>
+      </p>
+      <button onclick="myFunction()" id="myBtn">Read more</button>
+    </div>
+
+    <div class="image">
+      <img src="images/notes.jpg" alt="notes">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<script>
+  function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  // Toggle visibility and change button text
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+  
+</script>
+
+
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('.navigation_bar');
+    nav.classList.toggle('active');
+  }
+</script>
+<!-- ---------------------------about section ends  --------------------- -->
+
+
+<!-- ---------------------------services section in the home page   --------------------- -->
+
+
+<section class="services" id="services">
+  <h1 class="heading">Our Services</h1>
+  <div class="box-container">
+      
+      <!-- Meal Planning Service box with a button linked to  meal_planning.html -->
+      <div class="box">
+        <img src="images/meal.png" alt="meal icon" style="height: 50px;">
+          <h3>Meal Plan Generator</h3>
+          <p> Create Personalized meal plans based on your dietary needs and goals.</p>
+          <ul>
+              <li>Custom meal plans</li>
+              <li>Weekly planning</li>
+              <li>Support health goals</li>
+          </ul>
+          <!-- Button linked  start meal planning -->
+          <a href="login.php" class="btn">Start Meal Planning</a>
+      </div>
+
+
+
+
+
+
+      <!-- Calories Calculator container  -->
+      <div class="box">
+          <img src="images/kal.png" alt="Meal Calculator Logo" style="height: 50px;">
+          <h3>Meal Calculator</h3>
+          <p>Discover your ideal daily calorie intake with our easy-to-use Calories Calculator.</p>
+          <ul>
+              <li>Calorie needs calculation</li>
+              <li>Macronutrient breakdown</li>
+              <li>Weight management goals</li>
+          </ul>
+          <!-- Button to start meal calculation means opens up the Calories_Calculator.html-->
+         
+         <a href="login.php" class="btn">Start Calculating</a>
+        </div>
+
+      
+
+     
+</section>
+
+<!------------------------- Services Section Ends ---------------------->
+
+
+
+
+<!-----------------------why health food is imoprtant information with cloud shaped  -------------------->
+
+<section class="food-importance" id="food-importance">
+  <div class="content">
+      <h1 class="heading">Why Healthy Food is Important</h1>
+
+      <div class="cloud-container">
+          <div class="cloud" data-wow-duration="1.5s" data-wow-delay=".5s">
+              <div class="cloud-icon">
+                  <i class="fa fa-apple-alt"></i>
+              </div>
+              <h3>Improves Health</h3>
+              <p>Healthy food helps maintain a balanced weight, boosts immunity, and provides energy throughout the day.</p>
+          </div>
+
+          <div class="cloud" data-wow-duration="1.5s" data-wow-delay=".7s">
+              <div class="cloud-icon">
+                  <i class="fa fa-heart"></i>
+              </div>
+              <h3>Supports Heart Health</h3>
+              <p>Nutritious foods like vegetables and whole grains contribute to heart health by lowering cholesterol and blood pressure.</p>
+          </div>
+
+          <div class="cloud" data-wow-duration="1.5s" data-wow-delay=".9s">
+              <div class="cloud-icon">
+                  <i class="fa fa-lemon"></i>
+              </div>
+              <h3>Boosts Immunity</h3>
+              <p>A diet rich in vitamins and minerals strengthens the immune system and helps fight off illnesses.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+<!----------------------------meals contanewr for lunch dinner and brekfats and you tube vidios linked  -----------------------------[]-->
+
+
+<section class="importance">
+  <h1>Nutritious Meals</h1>
+  <p>Learn why breakfast, lunch, and dinner are vital for your daily nutrition.</p>
+  <div class="row">
+    <!-- Breakfast -->
+    <div class="importnace-col">
+      <img src="images/brekfast.jpg.avif" alt="Breakfast image">
+      <h3>Breakfast</h3>
+      <p class="short-desc">Breakfast kickstarts your metabolism after hours of fasting during sleep.</p>
+      <p class="full-desc hidden">Breakfast kickstarts your metabolism after hours of fasting during sleep</p>
+      
+      <a href="https://youtu.be/HAmeeWuQWx0?si=W-eK-ZCOxV4SQRAU" target="_blank" class="btn"title="Watch video about breakfast benefits">Watch here</a>
+    </div>
+
+    <!-- Lunch -->
+    <div class="importnace-col">
+      <img src="images/lunch.jpg.avif" alt="Lunch image">
+      <h3>Lunch</h3>
+      <p class="short-desc">Lunch replenishes your energy levels to keep you active for the rest of the day</p>
+      <p class="full-desc hidden">It helps replenish glycogen stores and supports muscle repair during sleep.</p>
+      
+      <a href="https://youtu.be/m4jJsseY2Ic?si=idAP0TYu0f6ggEMc" target="_blank" class="btn"title="Watch video about lunch benefits">Watch here</a>
+    </div>
+
+    <!-- Dinner -->
+    <div class="importnace-col">
+      <img src="images/dinner.webp" alt="Dinner image">
+      <h3>Dinner</h3>
+      <p class="short-desc">Dinner provides the nutrients necessary for overnight repair and recovery.</p>
+      <p class="full-desc hidden">Dinner is an opportunity to include vegetables and lean proteins while keeping portions smaller to aid digestion and better sleep.</p>
+     
+      <a href="https://youtu.be/A-nPH8GRlE0?si=TDQT0m1Z08bLQf-n" target="_blank" class="btn"title="Watch video about dinner benefits">Watch here</a>
+    </div>
+  </div>
+</section>
+
+
+<!-------a button that links to contact page from home page ------------------->
+
+
+<section class="cta">
+  <h1>For any inquiries or assistance, please don't hesitate to reach out to us.<br>We’re here to help</h1>
+  <a href="contact.html" target="_blank" class="btn"title="click here to contact us ">Contact us here</a>
+</section>
+
+</body>
+</html>
+

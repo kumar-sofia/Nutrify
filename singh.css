@@ -1,0 +1,208 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: url("images/back00.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: auto;
+    position: relative;
+  }
+  
+  /* Wrapper for form */
+  .wrapper {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(68, 68, 60, 0.5); /* Semi-transparent dark overlay */
+  padding: 20px;
+  backdrop-filter: blur(10px); /* Applying blur to the background */
+  flex-direction: column; /* Stack elements vertically */
+  gap: 20px; /* Space between form and buttons */
+}
+  
+  
+  form {
+    background: rgba(200, 203, 168, 0.27);
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(176, 183, 123, 0.579);
+    min-height: 600px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #1d1e23d6;
+    font-size: 45px;
+    margin-bottom: 35px;
+  }
+  
+  .input-box {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-box label {
+    width: 130px; /* Space for the label */
+    font-size: 10px;
+    color: #eff9f8;
+    padding-right: 18px;
+    text-align: top;
+  }
+  
+  .input-box select {
+    width: calc(110% - 170px); /* Adjust width to account for label */
+    padding: 100px;
+    font-size: 25px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .input-box select:focus {
+    border-color: #0e0f0dd2;
+  }
+  
+  .input-box i {
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+  }
+  
+  /* Style for buttons */
+
+  .btn-container {
+    display: flex; /* Flex container to hold the buttons side by side */
+    justify-content: space-between; /* Space between buttons */
+    width: 100%; /* Full width */
+    gap: 10px; /* Space between buttons */
+  }
+  .btn {
+    width: 48%; /* Keep width to 48% for buttons to sit side by side */
+  padding: 15px;
+  font-size: 18px;
+  background-color: #101111d2;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #232328b6;
+  }
+  
+  /* Responsive Design */
+  @media only screen and (max-width: 768px) {
+    form {
+      width: 100%;
+      padding: 20px;
+    }
+    .input-box {
+      flex-direction: column;
+    }
+    .input-box label {
+      text-align: left;
+      padding-right: 0;
+    }
+    .input-box select {
+      width: 100%;
+    }
+  }
+  
+  
+  /* Navigation Bar Styles */
+  header {
+    background-color: #333;
+    padding: 15px 0;
+    position: sticky;  /* Sticky header */
+    top: 0;  /* Stick to the top */
+    z-index: 1000;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+  
+  nav {
+    position: relative;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+  /* Navigation Bar Styles */
+header {
+  background-color: #333;  /* Sticky header with dark background */
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navigation_bar {
+  background-color: #494646;  /* Set the greblack color for the navigation background */
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+.navigation_bar a {
+  text-decoration: none;
+  color: #fff; /* White text for the links */
+  font-size: 1.0rem;
+}
+
+.navigation_bar a:hover {
+  color: #7c925d; /* Optional hover color */
+}
+
+/* Add gap to the last list item ("Sign Up") */
+.navigation_bar li:last-child {
+  margin-right: 20px;
+}
+
+  /* Mobile Menu */
+  @media (max-width: 768px) {
+    .navigation_bar {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      padding: 20px;
+    }
+  
+    .navigation_bar.active {
+      display: flex;  /* Show the navigation when active */
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  

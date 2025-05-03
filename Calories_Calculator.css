@@ -1,0 +1,200 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: url("images/back00.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: auto;
+    position: relative;
+  }
+  
+  /* wrapper for styling the foarm*/
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(68, 68, 60, 0.5);
+    padding: 20px;
+    backdrop-filter: blur(10px);
+  }
+  
+  form {
+    background: rgba(200, 203, 168, 0.27);
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(176, 183, 123, 0.579);
+    min-height: 600px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #1d1e23d6;
+    font-size: 45px;
+    margin-bottom: 35px;
+  }
+  
+  .input-box {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-box label {
+    width: 130px;
+    font-size: 20px;
+    color: #eff9f8;
+    padding-right: 18px;
+    text-align: top;
+  }
+  
+  .input-box select {
+    width: calc(110% - 170px);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .input-box select:focus {
+    border-color: #0e0f0dd2;
+  }
+  
+  .meal-planning-buttons {
+    display: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  button {
+    width: 48%; /* adjusting the buttons widh */
+    padding: 12px 20px; /* Reduce padding */
+    font-size: 16px; /* Reduce font size */
+    background-color: #101111d2; /* Background color */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  button:hover {
+    background-color: #232328b6; /* Hover effect */
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    padding-top: 60px;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+  }
+  
+  .modal button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Navigation Bar Styling */
+  .navbar {
+    background-color: #333;
+    padding: 10px 0;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .navbar .logo {
+    color: #fff;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  
+  /* Responsive design for different screen sizes */
+  @media only screen and (max-width: 768px) {
+    form {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .input-box {
+      flex-direction: column;
+    }
+  
+    .input-box label {
+      text-align: left;
+      padding-right: 0;
+    }
+  
+    .input-box select {
+      width: 100%;
+    }
+  
+    .meal-planning-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
